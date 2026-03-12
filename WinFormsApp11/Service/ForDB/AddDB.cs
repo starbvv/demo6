@@ -74,5 +74,26 @@ namespace WinFormsApp11.Service.ForDB
                 MessageBox.Show("Не удалось оформить контракт на сво(((((");
             }
         }
+        public static void AddEnd(Place place, DateTime EndData, string Status)
+        {
+            try
+            {
+                using var db = new Connect();
+                db.Place.Attach(place);
+                var addEnd = new CheckArenda
+                {
+                    Place = place,
+                    EndData = EndData,
+                    Status = Status
+                };
+
+                db.CheckArenda.Add(addEnd);
+                db.SaveChanges();
+            }
+            catch
+            {
+                MessageBox.Show("Не удалось добавить выезд");
+            }
+        }
     }
 }

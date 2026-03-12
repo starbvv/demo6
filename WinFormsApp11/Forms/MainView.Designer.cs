@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
+            button7 = new Button();
+            button8 = new Button();
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
@@ -51,6 +53,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(button7);
+            splitContainer1.Panel1.Controls.Add(button8);
             splitContainer1.Panel1.Controls.Add(button6);
             splitContainer1.Panel1.Controls.Add(button5);
             splitContainer1.Panel1.Controls.Add(button4);
@@ -65,6 +69,26 @@
             splitContainer1.SplitterDistance = 366;
             splitContainer1.TabIndex = 0;
             // 
+            // button7
+            // 
+            button7.Location = new Point(190, 404);
+            button7.Name = "button7";
+            button7.Size = new Size(173, 23);
+            button7.TabIndex = 8;
+            button7.Text = "Добавить выезд";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(12, 375);
+            button8.Name = "button8";
+            button8.Size = new Size(351, 23);
+            button8.TabIndex = 7;
+            button8.Text = "Выезд";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
             // button6
             // 
             button6.Location = new Point(190, 312);
@@ -73,7 +97,7 @@
             button6.TabIndex = 6;
             button6.Text = "Добавить аренду";
             button6.UseVisualStyleBackColor = true;
-            button6.Click += this.button6_Click;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
@@ -81,7 +105,7 @@
             button5.Name = "button5";
             button5.Size = new Size(173, 23);
             button5.TabIndex = 5;
-            button5.Text = "вайпер дабл р шарит";
+            button5.Text = "Добавить человека";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
@@ -134,6 +158,8 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(729, 578);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            dataGridView1.KeyDown += dataGridView1_KeyDown;
             // 
             // MainView
             // 
@@ -163,5 +189,7 @@
         private Button button5;
         private Button button4;
         private DataGridView dataGridView1;
+        private Button button7;
+        private Button button8;
     }
 }

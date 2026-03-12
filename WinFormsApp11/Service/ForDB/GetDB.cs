@@ -27,5 +27,10 @@ namespace WinFormsApp11.Service.ForDB
             using var db = new Connect();
             return db.ZppleLifePelmeni.Include(a => a.Places).Include(a => a.Pple).ToList();
         }
+        public static List<CheckArenda> GetEnd()
+        {
+            using var db = new Connect();
+            return db.CheckArenda.Include(a => a.Place).ToList();
+        }
     }
 }

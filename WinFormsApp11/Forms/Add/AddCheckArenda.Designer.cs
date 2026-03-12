@@ -45,6 +45,7 @@
             SaveButton.TabIndex = 0;
             SaveButton.Text = "Сохранить";
             SaveButton.UseVisualStyleBackColor = true;
+            SaveButton.Click += SaveButton_Click;
             // 
             // ArendaComboBox
             // 
@@ -59,6 +60,7 @@
             // 
             StatusComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             StatusComboBox.FormattingEnabled = true;
+            StatusComboBox.Items.AddRange(new object[] { "Чистый", "Занят", "Назначен к уборке", "Грязный" });
             StatusComboBox.Location = new Point(12, 119);
             StatusComboBox.Name = "StatusComboBox";
             StatusComboBox.Size = new Size(214, 23);
@@ -111,6 +113,8 @@
             Controls.Add(StatusComboBox);
             Controls.Add(ArendaComboBox);
             Controls.Add(SaveButton);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "AddCheckArenda";
             Text = "Добавить статус номера";
             ResumeLayout(false);

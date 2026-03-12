@@ -19,7 +19,7 @@ namespace WinFormsApp11.Models
         public string LastName { get; set; } = string.Empty;
         public override string ToString()
         {
-            return Surname + Name + LastName;
+            return $"{Surname} {Name} {LastName}";
         }
     }
 }

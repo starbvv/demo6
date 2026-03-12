@@ -14,6 +14,7 @@ namespace WinFormsApp11.Service
         public DbSet<Place> Place { get; set; }
         public DbSet<Pple> Pple { get; set; }
         public DbSet<ZppleLifePelmeni> ZppleLifePelmeni { get; set; }
+        public DbSet<CheckArenda> CheckArenda { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

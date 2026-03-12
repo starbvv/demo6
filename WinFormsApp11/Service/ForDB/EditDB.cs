@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using WinFormsApp11.Forms.Edit;
 using WinFormsApp11.Models;
 
 namespace WinFormsApp11.Service.ForDB
@@ -55,7 +56,7 @@ namespace WinFormsApp11.Service.ForDB
         {
             try
             {
-                using var db = new Connect();
+                using var db = new Connect();;
                 var editArenda = db.ZppleLifePelmeni.Include(a => a.Places.Id).Include(a => a.Pple.Id).FirstOrDefault(a => a.Id == id);
 
                 editArenda.StartTime = startDate;

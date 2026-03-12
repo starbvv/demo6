@@ -38,7 +38,6 @@ namespace WinFormsApp11
                     MainView main = new MainView();
                     main.ShowDialog();
                 }
-                this.Close();
             }
         }
     }

@@ -16,10 +16,9 @@ namespace WinFormsApp11.Service.ForDB
             var check = db.Login.FirstOrDefault(a => a.Name == Name && a.Password == Password);
             if (check != null)
             {
-                return true;
-                MessageBox.Show("Добро пожаловать!");
+                return false;
             }
-            return false;
+            return true;
         }
     }
 }

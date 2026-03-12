@@ -16,7 +16,7 @@ namespace WinFormsApp11.Models
 
         public override string ToString()
         {
-            return Number + Etazh + Category;
+            return $"Номер {Number} Этаж {Etazh} Категория{Category}";
         }
     }
 }
